@@ -1,6 +1,6 @@
 # Camel STM32L4 V2
 
-A solar-powered wearable / tracker sensor node built as a **two-board stack**. It combines an STM32 microcontroller with motion, heart-rate, temperature and sound sensing, plus LoRa and GPS, all powered from a single LiPo cell charged by a solar panel.
+A solar-powered wearable / tracker sensor node built as a **two-board stack**, with both boards on **4-layer PCBs**. It combines an STM32 microcontroller with motion, heart-rate, temperature and sound sensing, plus LoRa and GPS, all powered from a single LiPo cell charged by a solar panel.
 
 | Top | Bottom |
 |:---:|:---:|
@@ -24,6 +24,8 @@ The boards stack on top of each other. Just line up the pins of the two headers 
 
 ## Features
 
+- **4-layer PCBs** (both boards)
+
 **Mother board**
 - **STM32U385CGU6** microcontroller (16 MHz crystal + 32.768 kHz RTC crystal)
 - **LSM6DSVETR** 6-axis IMU
@@ -42,7 +44,7 @@ The boards stack on top of each other. Just line up the pins of the two headers 
 - **SS14**: Schottky diodes (x3)
 - **E22-900M22S**: LoRa module (SX1262, 868/915 MHz)
 - **u-blox SAM-M8Q**: GPS module
-- Solar panel input (JST-PH 2-pin) and battery header
+- Solar panel header and battery connector (JST-PH 2-pin)
 - CHARGING and DONE status LEDs
 
 ## SWD header (mother board)
@@ -92,8 +94,8 @@ Pin 1 is the square pad.
 
 | Connector | Type | Pin 1 | Pin 2 |
 |-----------|------|-------|-------|
-| Solar panel | JST-PH 2-pin | +VSOLAR | GND |
-| Battery | 2.54 mm 1×2 header | +VBAT | GND |
+| Solar panel | 2.54 mm 1×2 header | GND | +VSOLAR |
+| Battery | JST-PH 2-pin | GND | +VBAT |
 
 > Check the polarity on the silkscreen before connecting a battery or a solar panel.
 
@@ -107,7 +109,7 @@ Pin 1 is the square pad.
 
 This project is released under a license and is the property of the **EI&TIC laboratory** (Laboratoire Électricité Intelligente & TIC).
 
-It is free to use, modify and share, but it is **not for commercial use**: it is a research project, not a product to sell.
+It is free to use, modify and share, but it is **not for commercial use**: it is a research project, not a product to sell, so please don't use it to make a profit.
 
 ## Author
 
